@@ -92,7 +92,7 @@ a:focus {
 /*header section*/
 .hero_area {
   position: relative;
-  min-height: 100vh;
+  min-height: 760px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,6 +100,7 @@ a:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 
 .bg-box {
@@ -108,6 +109,7 @@ a:focus {
   left: 0;
   width: 100%;
   height: 100%;
+  background: linear-gradient(90deg, rgba(12, 12, 12, 0.82), rgba(12, 12, 12, 0.38));
 }
 
 .bg-box img {
@@ -115,6 +117,9 @@ a:focus {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  filter: saturate(0.8) brightness(0.65);
 }
 
 .sub_page .hero_area {
@@ -153,8 +158,9 @@ a:focus {
 
 .navbar-brand span {
   font-weight: bold;
-  font-size: 32px;
+  font-size: 2.4rem;
   color: #ffffff;
+  letter-spacing: 1px;
 }
 
 .custom_nav-container {
@@ -322,7 +328,8 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  padding: 45px 0 75px 0;
+  padding: 70px 0 60px;
+  z-index: 1;
 }
 
 .slider_section .row {
@@ -338,29 +345,40 @@ a:focus {
 
 .slider_section .detail-box {
   color: #ffffff;
-  margin-bottom: 145px;
+  margin-bottom: 20px;
+  max-width: 660px;
+  position: relative;
+  z-index: 1;
+  padding-top: 10px;
 }
 
 .slider_section .detail-box h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2.8rem, 4vw, 4.6rem);
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 
 .slider_section .detail-box p {
-  font-size: 14px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 600px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .slider_section .detail-box a {
   display: inline-block;
-  padding: 10px 45px;
+  padding: 16px 54px;
   background-color: #ffbe33;
   color: #ffffff;
   border-radius: 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
-  margin-top: 10px;
+  margin-top: 18px;
+  font-weight: 700;
+  min-width: 210px;
 }
 
 .slider_section .detail-box a:hover {
